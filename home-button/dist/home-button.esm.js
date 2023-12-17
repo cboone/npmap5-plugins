@@ -68,8 +68,9 @@ class HomeButton {
         div.className = "maplibregl-ctrl maplibregl-ctrl-group";
         const button = document.createElement("button");
         // Add ARIA attributes to the button for accessibility
-        button.setAttribute('aria-label', 'Pan/zoom to initial extent'); // For screen readers
-        button.alt = 'Pan/zoom to initial extent'; // For legacy screen readers
+        button.setAttribute('aria-label', 'Reset map to original view'); // For screen readers
+        button.alt = 'Reset map to original view'; // For legacy screen readers
+        button.title = 'Reset map to original view';
         button.appendChild(this._options.icon);
         div.appendChild(button);
         div.addEventListener("contextmenu", (e) => e.preventDefault());
